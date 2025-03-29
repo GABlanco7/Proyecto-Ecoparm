@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="minilogo" rel="icon" href="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}">
+    <title>NOSOTROS</title>
+    <link rel="stylesheet" href="{% static 'css/style_nosotros.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <script src="{% static 'js/script_loader.js' %}"></script>
+    <script src="{% static 'js/script_api_vista_usuario.js' %}"></script>
+</head>
+
+<body>
+    <div id="overlay" class="overlay-loader">
+        <div id="loader" class="loader"></div>
+    </div>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="{% url 'index' %}" class="enlace">
+            <img src="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}" class="logoeco">
+        </a>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+            <li><a href="{% url 'galeria' %}">Galería</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+    </nav>
+    <section>
+        <br><br><br>
+        
+        <div class="fondo">
+            <center>
+                <h1>NOSOTROS</h1>
+            </center>
+            <br>
+            <div class="">
+                <div class="row">
+                    <div class="mision">
+                        <h3>MISIÓN</h3>
+                        <h4>
+                            <br>Genera resultados de impacto social, que redunden en el bienestar integral de los Habitantes
+                            del Municipio de Sogamoso, articulando la efectiva gestión administrativa orientada al
+                            Desarrollo Sostenible, con la participación activa de nuestros ciudadanos, bajo los principios
+                            de transparencia y equidad.
+                        </h4>
+                    </div>
+                    <div class="vision">
+                        <h3>VISIÓN</h3>
+                        <h4>
+                            <br>En el año 2024, Sogamoso la ciudad del Sol es reconocida por sus altos niveles de competitividad,
+                            resultado de un proceso que permitió identificar y aprovechar las bondades del territorio y de su
+                            gente, afianzando el arraigo, el trabajo en equipo y la cultura ciudadana.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="fondo">
+            <center>
+                <h1>UBICACIONES</h1>
+            </center>
+            <br>
+            <div class="row-full">
+                <div class="ubicacion">
+                    <h3>ENCUENTRANOS...</h3>
+                    <br></br>
+                    <video id="video-ubicacion" class="video-full" muted>
+                        <source src="{% static 'media/video_ubicacion.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <br>
+              <div class="row">
+                 <div class="ubicacion">
+                     <h3>PARAMO</h3>
+                     <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.505860147124!2d-72.79601142021873!3d5.639689679751475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a4d69f00a940b%3A0x88ef1914f548f0a1!2zUMOhcmFtbyBkZSBTaXNjdW5zw60!5e0!3m2!1ses!2sco!4v1742474693734!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="ubicacion">
+                     <h3>OFICINA GESTION DEL RIESGO</h3>
+                      <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.4909660275465!2d-72.92701923042803!3d5.718344699641485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45deea47d4d5%3A0xc44a465a5a8bb680!2sCra.%2011%20%2314-164%2C%20Sogamoso%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1742474581383!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo_footer">
+                <img src="{% static 'imagenes/ecoparm.png' %}" class="logo">
+            </div>
+            <div class="texto_footer">
+                <p>&copy; 2024 ECOPARM. Todos los derechos reservados.</p>
+                <p>
+                    <a href="https://web.facebook.com/people/Paramos-de-Colombia-Fuente-de-Vida/100070184100855/?locale=es_LA" target="_blank">Facebook</a> | 
+                    <a href="https://www.instagram.com/paramosdecolombia/" target="_blank">Instagram</a> | 
+                    <a href="#">WhatsApp</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+/* Reinicio de estilos básicos */
+*{
+    padding: 0;  /* Elimina el padding por defecto de todos los elementos */
+    margin: 0;  /* Elimina el margin por defecto de todos los elementos */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    list-style: none;  /* Elimina los puntos de las listas */
+    box-sizing: border-box;  /* Asegura que el padding y el border no aumenten el tamaño total de los elementos */
+}
+
+/* Fondo de la página */
+body {
+     /* background-color: #b6cb9e; */
+     background: url("/static/image/fondo.jpg") no-repeat fixed center center / cover;
+     height: 100vh;  /* El alto del body es el 100% de la altura de la ventana */
+    margin: 0;  /* Elimina los márgenes por defecto */
+    display: flex;  /* Utiliza flexbox para la disposición de los elementos */
+    flex-direction: column;  /* Organiza los elementos hijos en una columna */
+}
+
+h1 {
+    text-align: center;  /* Alinea el texto de los párrafos de tipo h4 de forma justificada */
+    font-family: "Neonderthaw", cursive;
+}
+
+h4 {
+    text-align: justify;  /* Alinea el texto de los párrafos de tipo h4 de forma justificada */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+
+/* Estilos para el menú de navegación */
+nav{
+    background: linear-gradient(-135deg, #32794a, #0c0c0c);  /* Degradado de color en el fondo del menú */
+    height: 75px;  /* Define la altura del menú de navegación */
+    width: 100%;  /* El menú ocupa todo el ancho disponible */
+}
+
+.video {
+    border-radius: 25px;
+}
+
+.logoeco {
+    height: 85px;
+    margin-left: 10px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 9px;
+}
+
+.video-container {
+    width: 100%;  /* El contenedor ocupa el 100% del ancho disponible */
+    max-width: 1020px;  /* Limita el ancho máximo del video */
+    margin: 0 auto;  /* Centra el video en la pantalla */
+}
+
+/* Estilo para el video */
+.video {
+    width: 1020px;  /* Establece el tamaño base del video */
+    height: 630px;  /* Establece la altura base del video */
+    border-radius: 25px;  /* Opcional: bordes redondeados */
+}
+
+/* Estilo para los enlaces dentro de la etiqueta 'a' */
+.enlace {
+    position: absolute;  /* Posiciona de forma absoluta el enlace (generalmente para moverlo dentro de un contenedor) */
+    padding: 1px;  /* Agrega un pequeño espacio interior */
+    display: flex;  /* Establece un contenedor flexible */
+}
+
+nav ul{
+    float: right;  /* Flota el menú a la derecha */
+    margin-right: 20px;  /* Margen a la derecha del menú */
+}
+
+nav ul li{
+    display: inline-block;  /* Muestra los elementos de la lista de forma horizontal */
+    line-height: 80px;  /* Establece la altura de las líneas del menú */
+    margin: 0 5px;  /* Espacio entre los elementos de la lista */
+}
+
+nav ul li a{
+    color: #ffffff;  /* Color del texto blanco */
+    font-size: 20px;  /* Tamaño de fuente de los enlaces */
+    padding: 7px 13px;  /* Espaciado dentro de los enlaces */
+    border-radius: 3px;  /* Bordes redondeados de 3px en los enlaces */
+    text-transform: uppercase;  /* Convierte el texto de los enlaces a mayúsculas */
+    font-family: "Shrikhand", serif;  /* Establece la fuente del título */
+}
+
+li a.active, li a:hover{
+    background: none;  /* Sin fondo cuando el enlace está activo o se pasa el mouse por encima */
+    color: #4CAF50;  /* Cambia el color a negro cuando el enlace está activo o en hover */
+    transition: .5s;  /* Aplica una transición suave al cambio de color */
+}
+
+/* Estilo del menú hamburguesa para pantallas pequeñas */
+.checkbtn{
+    font-size: 30px;  /* Tamaño de la fuente del icono del menú */
+    color: #FFF;  /* Color blanco */
+    float: right;  /* Flota el icono a la derecha */
+    line-height: 80px;  /* La altura de la línea del icono */
+    margin-right: 40px;  /* Margen derecho */
+    cursor: pointer;  /* Aplica el cursor en forma de mano cuando se pasa por encima */
+    display: none;  /* Inicialmente no se muestra */
+}
+
+/* Oculta el checkbox */
+#check{
+    display: none;  /* No muestra el checkbox (solo se usa para el menú hamburguesa) */
+}
+
+/* Estilo para el contenedor del texto principal */
+.fondo{
+    max-width: 75%;  /* El contenedor no supera el 90% del ancho de la página */
+    height: auto;  /* La altura es automática según el contenido */
+    margin: 10px auto;  /* Centra el contenedor con márgenes automáticos */
+    background: #fefae0f0;  /* Fondo semi-transparente blanco */
+    color: #000000;  /* Texto negro */
+    padding: 30px;  /* Espaciado interno del contenedor */
+    border-radius: 35px;  /* Bordes redondeados */
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);  /* Sombra suave alrededor del contenedor */
+}
+
+/* Estilo de la sección principal */
+.section {
+    flex: 1;  /* La sección se expande para ocupar el espacio restante */
+    padding: 20px;  /* Espaciado interno */
+}
+
+.main {
+    flex-grow: 1;  /* La sección principal crece para ocupar el espacio restante */
+}
+
+/* Estilos del pie de página */
+footer {
+    background: linear-gradient(-135deg, #32794a, #0c0c0c);  /* Fondo degradado en el pie de página */
+    color: #fff;  /* Color blanco para el texto */
+    padding: 5px;  /* Espaciado interno */
+    width: 100%;  /* El pie de página ocupa todo el ancho */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave en la parte superior */
+    border-top-left-radius: 500px;  /* Bordes redondeados en la parte superior izquierda */
+    border-top-right-radius: 500px;  /* Bordes redondeados en la parte superior derecha */
+    margin-top: auto;  /* Hace que el pie de página siempre quede al final de la página */
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 12000px;
+}
+
+.texto_footer {
+    text-align: right;
+    margin-right: 60px;
+}
+
+footer p {
+    margin: 0;  /* Elimina el margen del párrafo */
+    font-family: "Neonderthaw", cursive;  /* Establece la fuente del título */
+}
+
+footer a {
+    color: #4CAF50;  /* Color verde para los enlaces */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline;  /* Subraya los enlaces cuando se pasa el mouse por encima */
+}
+
+/* Media queries para diseño responsive */
+
+@media (max-width: 950px){
+    .checkbtn{
+        display: block;  /* Muestra el icono del menú hamburguesa en pantallas pequeñas */
+    }
+    ul{
+        position: fixed;  /* Fija el menú en la pantalla */
+        width: 100%;  /* El menú ocupa todo el ancho */
+        height: 100vh;  /* El menú ocupa toda la altura de la ventana */
+        background: linear-gradient(225deg, #32794a, #0c0c0c);  /* Fondo degradado */
+        top: 75px;  /* Coloca el menú debajo del navbar */
+        left: -100%;  /* Inicialmente el menú está oculto a la izquierda */
+        text-align: center;  /* Centra el texto en los elementos del menú */
+        transition: all .5s;  /* Transición suave al abrir o cerrar el menú */
+    }
+    nav ul li{
+        display: block;  /* Los elementos del menú se muestran en bloque (uno debajo del otro) */
+        margin: 50px 0;  /* Espaciado entre los elementos */
+        line-height: 30px;  /* Reduce la altura de las líneas */
+    }
+    nav ul li a{
+        font-size: 20px;  /* Aumenta el tamaño de la fuente de los enlaces */
+    }
+    li a:hover, li a.active{
+        background: none;  /* Sin fondo cuando el enlace está activo o se pasa el mouse */
+        color: #4CAF50;  /* Cambia el color a negro */
+        transition: .5s;  /* Transición suave */
+    }
+    #check:checked ~ ul{
+        left: 0;  /* Muestra el menú cuando el checkbox está marcado */
+    }
+    .video {
+        width: 100%;  /* El video ocupa el 100% del contenedor */
+        height: 100%;  /* La altura se ajusta automáticamente manteniendo la proporción */
+    }
+    .logoeco {
+        height: 60px;
+    }
+    .texto_footer {
+        font-size: 15px;
+    }
+    #clima p {
+        font-size: 10px;
+    }
+    #clima h3 {
+        font-size: 15px;
+    }
+}
+
+/* Estilo para el loader */
+.loader {
+    border: 6px solid #000000;  /* Borde de 6px de color negro */
+    border-top: 6px solid #32794a;  /* Borde superior de color verde */
+    border-radius: 50%;  /* Hace el loader circular */
+    width: 50px;  /* Ancho del loader */
+    height: 50px;  /* Alto del loader */
+    animation: spin 2s linear infinite;  /* Aplica la animación de giro */
+    position: absolute;  /* Posiciona el loader de forma absoluta */
+    top: 50%;  /* Coloca el loader en el centro vertical */
+    left: 50%;  /* Coloca el loader en el centro horizontal */
+    margin-top: -60px;  /* Ajuste para centrarlo */
+    margin-left: -60px;  /* Ajuste para centrarlo */
+}
+
+/* Animación de giro */
+@keyframes spin {
+    0% { transform: rotate(0deg); }  /* Inicia el giro en 0 grados */
+    100% { transform: rotate(360deg); }  /* Finaliza el giro en 360 grados */
+}
+
+/* Estilo para el overlay (fondo oscuro cuando el loader está activo) */
+.overlay-loader {
+    position: fixed;  /* Posiciona la capa de carga de manera fija */
+    top: 0;  /* En la parte superior de la pantalla */
+    left: 0;  /* Alineado a la izquierda */
+    width: 100%;  /* Ancho completo */
+    height: 100%;  /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo semi-transparente negro */
+    display: flex;  /* Flexbox para centrar el contenido */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra el contenido verticalmente */
+    z-index: 9999;  /* Asegura que esté encima de otros elementos */
+}
+
+
+/* Clima */
+#clima {
+    width: auto;
+    padding: 7px;
+    background: #fefae0f0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;  /* Mantiene el clima fijo en la pantalla */
+    left: 10px;       /* Alineado a la izquierda de la pantalla */
+    top: 140px;       /* Alineado 140px desde la parte superior de la pantalla */
+    display: none;    /* Se activa con JavaScript */
+    text-align: center;
+    font-family: 'verdana', Georgia, serif;  /* Cambia la fuente */
+    border-radius: 25px;
+    z-index: 999;  /* Asegura que el clima esté por encima de otros elementos */
+}
+
+/* Estilo de los párrafos dentro del clima */
+#clima p {
+    text-align: left;
+}
+
+/* Estilo para el botón de clima */
+button#toggleClima {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;  /* Mantiene el botón fijo en la pantalla */
+    left: 15px;       /* Alineado a la izquierda de la pantalla */
+    top: 80px;        /* Alineado 80px desde la parte superior de la pantalla */
+    padding: 7px;
+    border: none;
+    border-radius: 50%; /* Redondea el botón */
+    cursor: pointer;
+    z-index: 1000;     /* Asegura que el botón esté por encima del clima */
+    display: flex;  /* Asegura que el contenido se ajuste */
+    align-items: center;
+}
+
+/* Estilo del botón */
+button#toggleClima {
+    font-size: 24px;
+    width: auto;      /* Para que el botón se ajuste al contenido */
+    padding: 10px;
+    background: linear-gradient(rgb(182, 204, 168), rgb(47, 182, 76), rgb(16, 71, 33));
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+/* Efecto de hover para el botón */
+button#toggleClima:hover {
+    background: linear-gradient(rgb(123, 224, 147), rgb(6, 39, 14));
+}
+
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #32794a;
+    color: white;
+}
+
+input {
+    margin: 10px;
+    padding: 8px;
+    width: 50%;
+}

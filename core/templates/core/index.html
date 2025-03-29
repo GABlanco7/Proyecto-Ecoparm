@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}">
+    <title>ECOPARM</title>
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <script src="{% static 'js/script_loader.js' %}" defer></script>
+    <script src="{% static 'js/script_clima.js' %}" defer></script>
+    <script src="{% static 'js/script_nemergencias.js' %}" defer></script>
+</head>
+<body>
+    <div id="overlay" class="overlay-loader">
+        <div id="loader" class="loader"></div>
+    </div>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="{% url 'index' %}" class="enlace">
+            <img src="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}" class="logoeco">
+        </a>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+            <li><a href="{% url 'galeria' %}">Galería</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <button id="toggleClima">
+            🌦️ <span id="textoClima" style="display: none;"></span>
+        </button>
+        <div id="clima">
+            <h3 id="ciudad">Sogamoso</h3>
+            <p id="temperatura">🌡️ --°C</p>
+            <p id="humedad">💧 Humedad: --%</p>
+            <p id="descripcion">☁️ --</p>
+        </div>
+</main>
+    <section>
+        <br><br><br>
+        <div class="fondo">
+            <center>
+                <h1>Páramo de Siscunsí: Un Paraíso Natural en Sogamoso, Boyacá!</h1>
+            </center>
+            <br>
+            <h4>
+                Enclavado en las alturas de los Andes colombianos, el Páramo de Siscunsí es un tesoro ecológico que deslumbra con su belleza imponente y su importancia ambiental. Ubicado en el municipio de Sogamoso, Boyacá, este ecosistema de alta montaña es una de las principales reservas hídricas de la región, albergando nacimientos de agua que alimentan quebradas y ríos fundamentales para la vida en el altiplano cundiboyacense.
+                Su paisaje, dominado por los majestuosos frailejones, la neblina que se desliza entre las montañas y las cristalinas lagunas, crea un escenario mágico donde la naturaleza se muestra en su máxima expresión. En este hábitat único conviven especies emblemáticas como el oso de anteojos, el venado de páramo, el águila real de montaña y una gran variedad de aves, lo que lo convierte en un destino ideal para el avistamiento de fauna y flora.
+                <br><br>Más allá de su riqueza natural, el Páramo de Siscunsí es un lugar de gran valor cultural e histórico. Durante siglos, ha sido parte del territorio de los Muiscas, quienes veneraban sus lagunas como espacios sagrados. Hoy, sigue siendo un sitio de conexión espiritual y reflexión, perfecto para quienes buscan un escape de la rutina y una experiencia de inmersión en la naturaleza.
+                Para los amantes del ecoturismo y el senderismo, este páramo ofrece rutas espectaculares que permiten recorrer sus paisajes llenos de vida y respirar el aire puro de las montañas. Explorar el Páramo de Siscunsí es más que una simple visita; es una aventura que invita a valorar y proteger uno de los ecosistemas más frágiles y esenciales del planeta.
+                <br><br>🌿Ven y descubre la magia del Páramo de Siscunsí. Un santuario natural que te espera con su inmensa biodiversidad y paisajes inolvidables..</h4>
+        </div>
+        <br>
+        <div class="fondo">
+            <center>
+            <h1>Explorando la Magia del Páramo</h1>
+            <br><iframe src="https://www.youtube.com/embed/BLnTMUgecyQ?si=mgL3UP4YOypNL8jq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
+            </center>
+        </div>
+        <br>
+        <div class="fondo">
+            <h1>📞 Teléfonos de Emergencia</h1>
+            <input type="text" id="search" placeholder="🔍 Buscar entidad..." onkeyup="filtrarTabla()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>📌 ENTIDAD</th>
+                        <th>📞 TELÉFONO</th>
+                        <th>📝 SERVICIOS</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-emergencia">
+                    <tr>
+                        <td>Jefe Oficina Gestión de Riesgos</td>
+                        <td>(608) 7702040</td>
+                        <td>Coordinación de emergencias</td>
+                    </tr>
+                    <tr>
+                        <td>Cruz Roja Colombiana</td>
+                        <td>3124800123</td>
+                        <td>Ambulancias y rescate</td>
+                    </tr>
+                    <tr>
+                        <td>Defensa Civil</td>
+                        <td>3132620844</td>
+                        <td>Ambulancia y rescate</td>
+                    </tr>
+                    <tr>
+                        <td>Cuerpo de Bomberos Voluntarios</td>
+                        <td>3132959347</td>
+                        <td>Atención de Incendios, inundaciones y Sustancias Peligrosas.</td>
+                    </tr>
+                    <tr>
+                        <td>Andirrescates S.A.S</td>
+                        <td>3108186490</td>
+                        <td>Ambulancias y Rescate.</td>
+                    </tr>
+                    <tr>
+                        <td>Andi Ambulancias</td>
+                        <td>3108186490  (608)7728197</td>
+                        <td>Ambulancias</td>
+                    </tr>
+                    <tr>
+                        <td>Lago Tac Ambulancias</td>
+                        <td>(608)7712292</td>
+                        <td>Ambulancia</td>
+                    </tr>
+                    <tr>
+                        <td>Hospital Regional Sogamoso</td>
+                        <td>(608)7730474 Ext. 107 (608)7702201 (608)7702202</td>
+                        <td>Ambulancia y Hospitalizacion.</td>
+                    </tr>
+                    <tr>
+                        <td>Clínica de Especialistas</td>
+                        <td>(608)7708686</td>
+                        <td>Ambulancia y Hospitalizacion.</td>
+                    </tr>
+                    <tr>
+                        <td>Clínica El Laguito</td>
+                        <td>(608)7708686</td>
+                        <td>Ambulancia y Hospitalizacion.</td>
+                    </tr>
+                    <tr>
+                        <td>Salud Sogamoso</td>
+                        <td>	(608)7730304</td>
+                        <td>Ambulancia y Hospitalizacion.</td>
+                    </tr>
+                    <tr>
+                        <td>Coservicios S.A. E.S.P.</td>
+                        <td>	
+                            3156153230    (608)7702110 ext. 205</td>
+                        <td>Cuadrillas de apoyo emergencias en Acueducto y Alcantarillado.</td>
+                    </tr>
+                    <tr>
+                        <td>EBSA Empresa de Energía de Boyaca.</td>
+                        <td>018000999115</td>
+                        <td>Atención de emergencias eléctricas.</td>
+                    </tr>
+                    <tr>
+                        <td>Policía Nacional.</td>
+                        <td>	
+                            112
+                            
+                            3232762350</td>
+                        <td>	Seguridad Municipal.</td>
+                    </tr>
+                    <tr>
+                        <td>Cuadrante #1</td>
+                        <td>3004603859</td>
+                        <td>Seguridad.</td>
+                    </tr>
+                    <tr>
+                        <td>Cuadrante #2</td>
+                        <td>3004604285</td>
+                        <td>Seguridad.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="logo_footer">
+                <img src="{% static 'imagenes/ecoparm.png' %}" class="logo">
+            </div>
+            <div class="texto_footer">
+                <p>&copy; 2024 ECOPARM. Todos los derechos reservados.</p>
+                <p>
+                    <a href="https://web.facebook.com/people/Paramos-de-Colombia-Fuente-de-Vida/100070184100855/?locale=es_LA" target="_blank">Facebook</a> | 
+                    <a href="https://www.instagram.com/paramosdecolombia/" target="_blank">Instagram</a> | 
+                    <a href="#">WhatsApp</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
