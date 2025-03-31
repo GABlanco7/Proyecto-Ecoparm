@@ -7,6 +7,7 @@
     <link class="minilogo" rel="icon" href="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}">
     <title>PORTAFOLIO</title>
     <link rel="stylesheet" href="{% static 'css/style_galeria.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_clima.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
@@ -14,6 +15,7 @@
     <script src="{% static 'js/script_portafolio.js' %}"></script>
     <script src="{% static 'js/script_loader.js' %}"></script>
     <script src="{% static 'js/script_galeria.js' %}"></script>
+    <script src="{% static 'js/script_clima.js' %}"></script>
 </head>
 <body>
   <div id="overlay" class="overlay-loader">
@@ -29,12 +31,23 @@
           <img src="{% static 'imagenes/logo_oficina_gestion_riesgo.png' %}" class="logoeco">
       </a>
       <ul>
-          <li><a href="{% url 'index' %}">Inicio</a></li>
-          <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
-          <li><a href="{% url 'galeria' %}">Galería</a></li>
-          <li><a href="{% url 'login' %}">Login</a></li>
-      </ul>
+        <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="{% url 'nosotros' %}"><i class="fas fa-users"></i> Nosotros</a></li>
+        <li><a href="{% url 'galeria' %}"><i class="fas fa-images"></i> Galería</a></li>
+        <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+    </ul>
   </nav>
+  <main>
+    <button id="toggleClima">
+        🌦️ <span id="textoClima" style="display: none;"></span>
+    </button>
+    <div id="clima">
+        <h3 id="ciudad">Sogamoso</h3>
+        <p id="temperatura">🌡️ --°C</p>
+        <p id="humedad">💧 Humedad: --%</p>
+        <p id="descripcion">☁️ --</p>
+    </div>
+  </main>
     <section>
         <br>
         <br>

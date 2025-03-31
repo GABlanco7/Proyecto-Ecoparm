@@ -403,57 +403,6 @@ li a.active, li a:hover{
     z-index: 9999;  /* Asegura que esté encima de otros elementos */
 }
 
-
-/* Clima */
-#clima {
-    width: auto;
-    padding: 7px;
-    background: #fefae0f0;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    position: fixed;  /* Mantiene el clima fijo en la pantalla */
-    right: 20px;       /* Alineado a la izquierda de la pantalla */
-    bottom: 150px;       /* Alineado 140px desde la parte superior de la pantalla */
-    display: none;    /* Se activa con JavaScript */
-    text-align: center;
-    font-family: 'verdana', Georgia, serif;  /* Cambia la fuente */
-    border-radius: 25px;
-    z-index: 999;  /* Asegura que el clima esté por encima de otros elementos */
-}
-
-/* Estilo de los párrafos dentro del clima */
-#clima p {
-    text-align: left;
-}
-
-/* Estilo para el botón de clima */
-button#toggleClima {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    position: fixed;  /* Mantiene el botón fijo en la pantalla */
-    right : 20px;       /* Alineado a la izquierda de la pantalla */
-    bottom: 90px;        /* Alineado 80px desde la parte superior de la pantalla */
-    padding: 7px;
-    border: none;
-    border-radius: 50%; /* Redondea el botón */
-    cursor: pointer;
-    z-index: 1000;     /* Asegura que el botón esté por encima del clima */
-    display: flex;  /* Asegura que el contenido se ajuste */
-    align-items: center;
-}
-
-/* Estilo del botón */
-button#toggleClima {
-    font-size: 24px;
-    width: auto;      /* Para que el botón se ajuste al contenido */
-    padding: 10px;
-    background-color: #2c8824;
-    border: none;
-    height: 52px;
-    width: 52px;
-    cursor: pointer;
-}
-
 table {
     width: 80%;
     margin: 20px auto;
@@ -475,4 +424,14 @@ input {
     margin: 10px;
     padding: 8px;
     width: 50%;
+}
+
+/* Clase "video" (la que ya tienes en tu iframe) */
+.video {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    aspect-ratio: 16 / 9; /* Relación de aspecto 16:9 (típica en YouTube) */
+    max-width: 800px; /* Límite máximo de ancho (opcional) */
+    height: auto; /* Altura automática basada en el aspect-ratio */
+    display: block;
+    margin: 0 auto; /* Centra el iframe */
 }
