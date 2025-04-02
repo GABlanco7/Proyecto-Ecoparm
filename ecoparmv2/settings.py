@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ecoparmv2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecoparm',  # El nombre de la BD que creaste
+        'USER': 'root',               # Usuario por defecto en Laragon
+        'PASSWORD': '',               # Normalmente vacío en Laragon
+        'HOST': '127.0.0.1',          # O 'localhost'
+        'PORT': '3306',               # Puerto por defecto de MySQL
     }
 }
 
