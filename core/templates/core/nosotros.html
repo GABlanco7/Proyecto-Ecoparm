@@ -9,12 +9,15 @@
     <title>NOSOTROS</title>
     <link rel="stylesheet" href="{% static 'css/style_nosotros.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_clima.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_accesibilidad.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <script src="{% static 'js/script_loader.js' %}"></script>
     <script src="{% static 'js/script_api_vista_usuario.js' %}"></script>
     <script src="{% static 'js/script_clima.js' %}" defer></script>
+    <script src="{% static 'js/script_accesibilidad1.js' %}" defer></script>
+    <script src="{% static 'js/script_accesibilidad2.js' %}" defer></script>
 </head>
 
 <body>
@@ -109,19 +112,35 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="logo_footer">
-                <img src="{% static 'imagenes/ecoparm.png' %}" class="logo">
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="{% static 'imagenes/ecoparm.png' %}" alt="ECOPARM" class="footer-logo">
+                <p>Protegiendo los páramos colombianos</p>
             </div>
-            <div class="texto_footer">
-                <p>&copy; 2024 ECOPARM. Todos los derechos reservados.</p>
-                <p>
-                    <a href="https://web.facebook.com/people/Paramos-de-Colombia-Fuente-de-Vida/100070184100855/?locale=es_LA" target="_blank">Facebook</a> | 
-                    <a href="https://www.instagram.com/paramosdecolombia/" target="_blank">Instagram</a> | 
-                    <a href="#">WhatsApp</a>
-                </p>
+            
+            <div class="footer-links">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                    <li><a href="{% url 'galeria' %}">Galería</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 ECOPARM. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

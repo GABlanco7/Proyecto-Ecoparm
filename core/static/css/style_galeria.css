@@ -173,6 +173,8 @@ li a.active, li a:hover{
     font-size: 25px;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: none;
+    margin-bottom: 60px;
+    margin-right: 7px;
 }
 
 /* Estilo para el botón de volver arriba al pasar el cursor */
@@ -182,41 +184,100 @@ li a.active, li a:hover{
 }
 
 /* Estilos del pie de página */
-footer {
+.site-footer {
     background: linear-gradient(-135deg, #32794a, #0c0c0c);  /* Fondo degradado en el pie de página */
-    color: #fff;  /* Color blanco para el texto */
-    padding: 5px;  /* Espaciado interno */
-    width: 100%;  /* El pie de página ocupa todo el ancho */
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave en la parte superior */
-    border-top-left-radius: 500px;  /* Bordes redondeados en la parte superior izquierda */
-    border-top-right-radius: 500px;  /* Bordes redondeados en la parte superior derecha */
-    margin-top: auto;  /* Hace que el pie de página siempre quede al final de la página */
+    color: white;
+    padding: 4rem 0 2rem;
 }
 
-.footer-content{
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-decoration: none;
+}
+
+.footer-container h3 {
+    text-decoration: none;
+}
+
+.footer-brand img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.footer-links h3, .footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-links h3::after, .footer-social h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: white;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.social-icons {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: flex;
     align-items: center;
-    max-width: 12000px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
 }
 
-.texto_footer {
-    text-align: right;
-    margin-right: 60px;
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    transform: translateY(-3px);
 }
 
-footer p {
-    margin: 0;  /* Elimina el margen del párrafo */
-    font-family: "Neonderthaw", cursive;  /* Establece la fuente del título */
-}
-
-footer a {
-    color: #4CAF50;  /* Color verde para los enlaces */
-    text-decoration: none;  /* Elimina el subrayado de los enlaces */
-}
-
-footer a:hover {
-    text-decoration: underline;  /* Subraya los enlaces cuando se pasa el mouse por encima */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Media query para pantallas con un ancho máximo de 858px */
