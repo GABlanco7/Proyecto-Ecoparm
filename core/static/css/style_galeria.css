@@ -160,8 +160,8 @@ li a.active, li a:hover{
     position: fixed; /* Fija el botón en la pantalla */
     bottom: 100px; /* Alinea el botón al fondo */
     right: 15px; /* Alinea el botón a la derecha */
-    background-color: #32794a; /* Color de fondo */
-    color: black; /* Color del texto */
+    background-color: #2c8824; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
     border: none; /* Elimina los bordes */
     width: 50px; /* Ancho del botón */
     height: 50px; /* Altura del botón */
@@ -170,8 +170,8 @@ li a.active, li a:hover{
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     z-index: 999; /* Asegura que el botón esté por encima de otros elementos */
     text-align: center; /* Centra el texto dentro del botón */
-    font-size: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 30px;
+    transition: all 0.3s ease;
     display: none;
     margin-bottom: 60px;
     margin-right: 7px;
@@ -179,8 +179,7 @@ li a.active, li a:hover{
 
 /* Estilo para el botón de volver arriba al pasar el cursor */
 #backToTop:hover {
-    background-color: #0c0c0ca8; /* Cambia el fondo al pasar el cursor */
-    color: #32794a; /* Cambia el color del texto */
+    transform: scale(1.1);
 }
 
 /* Estilos del pie de página */

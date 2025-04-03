@@ -11,7 +11,7 @@
     text-align: center;
     font-family: 'verdana', Georgia, serif;  /* Cambia la fuente */
     border-radius: 25px;
-    z-index: 999;  /* Asegura que el clima esté por encima de otros elementos */
+    z-index: 100;  /* Asegura que el clima esté por encima de otros elementos */
 }
 
 /* Estilo de los párrafos dentro del clima */
@@ -35,7 +35,7 @@ button#toggleClima {
     border: none;
     border-radius: 50%; /* Redondea el botón */
     cursor: pointer;
-    z-index: 1000;     /* Asegura que el botón esté por encima del clima */
+    z-index: 100;     /* Asegura que el botón esté por encima del clima */
     display: flex;  /* Asegura que el contenido se ajuste */
     align-items: center;
     transition: all 0.3s ease;
