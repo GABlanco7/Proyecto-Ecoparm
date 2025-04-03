@@ -125,6 +125,20 @@ li a.active, li a:hover{
     box-shadow: 0px 15px 20px rgba(0,0,0,0.1);  /* Sombra suave alrededor del contenedor */
 }
 
+.fondo-buscar{
+    max-width: 75%;  /* El contenedor no supera el 90% del ancho de la página */
+    height: auto;  /* La altura es automática según el contenido */
+    margin: 10px auto;  /* Centra el contenedor con márgenes automáticos */
+    background: #fefae0f0;  /* Fondo semi-transparente blanco */
+    color: #000000;  /* Texto negro */
+    padding: 30px;  /* Espaciado interno del contenedor */
+    border-radius: 35px;  /* Bordes redondeados */
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);  /* Sombra suave alrededor del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Estilo de la sección principal */
 .section {
     flex: 1;  /* La sección se expande para ocupar el espacio restante */
@@ -161,42 +175,61 @@ li a.active, li a:hover{
     opacity: 0.8;
 }
 
-.footer-links h3, .footer-social h3 {
+.footer-links h3, .footer-social h3, .footer-contactanos h3 {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
 }
 
-.footer-links h3::after, .footer-social h3::after {
+.footer-links h3::after, .footer-social h3::after, .footer-contactanos h3::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     width: 50px;
     height: 2px;
     background-color: var(--accent-color);
 }
 
-.footer-links ul {
+.footer-links ul, .footer-contactanos ul {
     list-style: none;
+    padding: 0;
 }
 
-.footer-links li {
+.footer-links li, .footer-contactanos li {
     margin-bottom: 0.8rem;
 }
 
-.footer-links a {
+.footer-links a, .footer-contactanos a {
     color: white;
     opacity: 0.8;
     transition: var(--transition);
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .footer-contactanos a:hover {
     opacity: 1;
     padding-left: 5px;
 }
 
+/* Alineación de Síguenos y Contáctanos */
+.footer-social-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.footer-social, .footer-contactanos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo de los iconos sociales */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -218,6 +251,7 @@ li a.active, li a:hover{
     background-color: var(--accent-color);
     color: var(--text-dark);
     transform: translateY(-3px);
+    background-color: #000000;
 }
 
 .footer-bottom {
