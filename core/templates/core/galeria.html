@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style_galeria.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_clima.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_accesibilidad.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_loader.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
@@ -21,9 +22,10 @@
     <script src="{% static 'js/script_accesibilidad2.js' %}" defer></script>
 </head>
 <body>
-  <div id="overlay" class="overlay-loader">
-      <div id="loader" class="loader"></div>
-  </div>
+    <div id="overlay">
+        <img class="loader-bird" src="{% static 'imagenes/fondo_loader.gif' %}" alt="Pájaro en los páramos">
+        <div class="loader-text">Cargando...</div>
+    </div>
   <button id="backToTop" onclick="scrollToTop()">↑</button>
   <nav>
       <input type="checkbox" id="check">
