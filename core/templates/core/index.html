@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="{% static 'css/style_accesibilidad.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_clima.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_loader.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <script src="{% static 'js/script_loader.js' %}" defer></script>
     <script src="{% static 'js/script_clima.js' %}" defer></script>
     <script src="{% static 'js/script_nemergencias.js' %}" defer></script>
-    <script src="{% static 'js/script_accesibilidad1.js' %}" defer></script>
     <script src="{% static 'js/script_accesibilidad2.js' %}" defer></script>
 </head>
 <body>
@@ -76,8 +74,10 @@
         </div>
         <br>
         <div class="fondo">
-            <h1>📞 Teléfonos de Emergencia</h1>
+            <center>
+                <h2>📞 Teléfonos de Emergencia</h2>
             <input type="text" id="search" placeholder="🔍 Buscar entidad..." onkeyup="filtrarTabla()">
+        </center>
             <table>
                 <thead>
                     <tr>
@@ -148,6 +148,11 @@
             <div class="footer-brand">
                 <img src="{% static 'imagenes/ecoparm.png' %}" alt="ECOPARM" class="footer-logo">
                 <p>Protegiendo los páramos colombianos</p>
+                <br>
+                <p>Horarios de Atencion</p>
+                <p><i class="far fa-clock"></i> Lunes a Viernes</p>
+                <p>8:00 am - 12:00 pm</p>
+                <p>2:00 pm - 5:00 pm</p>
             </div>
         
             <div class="footer-links">
@@ -165,14 +170,16 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/share/1BKxxcqc5y/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/alcaldiadesogamoso?igsh=MWFvOG43bGxkdHJudA==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@alcaldiasogamosoficial?_t=ZS-8vECL5TQSOe&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         
             <div class="footer-contactanos">
                 <h3>Contáctanos</h3>
                 <ul>
-                    <li><a href="mailto:habitad@ogamoso-boyaca.gov.co">habitad@ogamoso-boyaca.gov.co</a></li>
+                    <li><a href="mailto:habitad@ogamoso-boyaca.gov.co"><i class="fas fa-envelope"></i> habitad@ogamoso-boyaca.gov.co</a></li>                    
+                    <li><a href="tel:6087702040"><i class="fas fa-phone"></i> (608) 7702040</a></li>                    
+                    <li><a href="https://maps.google.com/?q=Cra. 11 #14-164, Sogamoso" target="_blank"><i class="fas fa-map-marker-alt"></i> Cra. 11 #14-164, Sogamoso </a></li>
                 </ul>
             </div>
         </div>

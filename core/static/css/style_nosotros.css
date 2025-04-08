@@ -16,15 +16,13 @@ body {
     flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
 }
 
-h1 {
+h2 {
     text-align: center;  /* Alinea el texto de los párrafos de tipo h4 de forma justificada */
     font-family: "Neonderthaw", cursive;
 }
 
 h3 {
-    text-align: center;
-    font-family: "Neonderthaw", cursive;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Estilo para los encabezados h4 */
@@ -359,4 +357,29 @@ li a.active, li a:hover{
 @keyframes spin {
     0% { transform: rotate(0deg); } /* Comienza desde 0 grados */
     100% { transform: rotate(360deg); } /* Termina en 360 grados */
+}
+
+/*ocultar texto*/
+.texto-oculto {
+    display: none; /* Oculta el texto al inicio */
+}
+
+.mostrar-texto {
+    color: #32794a;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.mostrar-texto:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.fondo a {
+    color: #32794a;
+}
+
+.fondo a:hover {
+    color: #000000;
+    text-decoration: underline;
 }
