@@ -245,7 +245,7 @@ label {
 }
 
 /* Estilo de los campos de texto */
-input[type="text"], input[type="password"], input[type="tel"],input[type="email"], textarea {
+input[type="text"], input[type="password"], input[type="tel"],input[type="email"],input[type="number"], textarea {
     width: 100%;
     padding: 15px;
     font-size: 1.1em;
@@ -274,4 +274,47 @@ form select[type="genero"] {
     color: #333333b0;
     transition: border-color 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
+}
+
+/* TOAST: Notificación tipo anuncio */
+.toast {
+    visibility: hidden;
+    min-width: 280px;
+    max-width: 90%;
+    background-color: #f44336; /* Rojo por defecto para error */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px 20px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* Mostrar el toast */
+.toast.show {
+    visibility: visible;
+    bottom: 60px;
+    opacity: 1;
+}
+
+/* Estilo para éxito */
+.toast.success {
+    background-color: #4CAF50; /* Verde para éxito */
+}
+
+/* Estilo para información */
+.toast.info {
+    background-color: #2196F3;
+}
+
+/* Estilo para advertencia */
+.toast.warning {
+    background-color: #ff9800;
 }

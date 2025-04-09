@@ -287,6 +287,7 @@ li a.active, li a:hover{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 /* Estilo para pantallas más pequeñas, como teléfonos móviles */
 @media (max-width: 950px){
     .checkbtn{

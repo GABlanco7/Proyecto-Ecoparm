@@ -12,9 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
-    <script type="text/javascript" src="{% static 'js/script_inicio.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js/script_validar_crear_usuario.js' %}" defer></script>
     <script src="{% static 'js/script_loader.js' %}" defer></script>
 </head>
+<div id="toast" class="toast"></div>
 <body>
     <div id="overlay" class="overlay-loader">
         <div id="loader" class="loader"></div>
@@ -53,7 +54,7 @@
                     </div>
                     <br>
                     <label for="identificacion">Número de identificación:</label>
-                    <input type="text" id="identificacion" name="identificacion" placeholder="Número de identificación" required pattern="[0-9]{0-10}">
+                    <input type="number" id="identificacion" name="identificacion" placeholder="Número de identificación" required pattern="[0-9]{0-10}">
                     <br>
                     <label for="genero">Género:</label>
                     <select id="genero" name="genero" required>
@@ -67,7 +68,7 @@
                     <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
                     <br>
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required pattern="[0-9]{10}" inputmode="numeric">
                     <br>
                     <h2>Crear Contraseña</h2>
                     <br>
