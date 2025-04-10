@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import RolListCreateAPIView, RolDetailAPIView
+from .views import RolListCreateAPIView
 
 
 urlpatterns = [
@@ -12,8 +12,6 @@ urlpatterns = [
     path('nosotros/', views.nosotros, name='nosotros'),
     path('recuperar_contraseña/', views.recuperar_contraseña, name='recuperar_contraseña'),
 
-# 👇 Rutas API para Rol
-    path('api/roles/', RolListCreateAPIView.as_view(), name='roles-list-create'),
-    path('api/roles/<int:pk>/', RolDetailAPIView.as_view(), name='roles-detail'),
-
+# 👇 Rutas API
+    path('api/models/rol', RolListCreateAPIView.as_view(), name='listar_crear_roles'),
 ]
