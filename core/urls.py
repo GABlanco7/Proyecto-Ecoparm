@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import RolListCreateAPIView
+from .views import RolDetailAPIView, RolListCreateAPIView, UsuarioDetailAPIView, UsuarioListCreateAPIView, ZonaDetailAPIView, ZonaListCreateAPIView
 
 
 urlpatterns = [
@@ -13,5 +13,15 @@ urlpatterns = [
     path('recuperar_contraseña/', views.recuperar_contraseña, name='recuperar_contraseña'),
 
 # 👇 Rutas API
-    path('api/models/rol', RolListCreateAPIView.as_view(), name='listar_crear_roles'),
+    #Rol
+    path('api/models/rol', RolListCreateAPIView.as_view(), name='listar_crear_roles'), #CREAR y MOSTRAR
+    path('api/models/rol/<int:pk>/', RolDetailAPIView.as_view(), name='rol-detail'),  # Vista para PUT, LEER y DELETE
+    
+    #Zona
+    path('api/models/zona', ZonaListCreateAPIView.as_view(), name='listar_crear_zona'), 
+    path('api/models/zona/<int:pk>/', ZonaDetailAPIView.as_view(), name='zona-detail'), 
+    
+    #Usuario
+    path('api/models/usuario', UsuarioListCreateAPIView.as_view(), name='listar_crear_usuario'), 
+    path('api/models/usuario/<int:pk>/', UsuarioDetailAPIView.as_view(), name='usuario-detail'), 
 ]

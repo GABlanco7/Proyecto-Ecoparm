@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'ecoparmv2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'ecoparm',
         'USER': 'postgres',
         'PASSWORD':'admin',
         'HOST': 'localhost',
