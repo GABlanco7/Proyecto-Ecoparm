@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from rest_framework import generics
 
+from core.templates.core.models.emergencia import Emergencia
+from core.templates.core.models.evidencia import Evidencia
+from core.templates.core.models.faunaflora import FaunaFlora
+from core.templates.core.models.imagen import Imagen
 from core.templates.core.models.rol import Rol
+from core.templates.core.models.ubicacion import Ubicacion
 from core.templates.core.models.usuario import Usuario
 from core.templates.core.models.zona import Zona
-from .serializers import RolSerializer, UsuarioSerializer, ZonaSerializer
+from .serializers import Emergenciaerializer, EvidenciaSerializer, FaunaFloraSerializer, ImagenSerializer, RolSerializer, UbicacionSerializer, UsuarioSerializer, ZonaSerializer
 
 
 # Create your views here.
@@ -55,3 +60,47 @@ class UsuarioDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Usuario.objects.all()  
     serializer_class = UsuarioSerializer 
 
+#ubicacion
+class UbicacionListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Ubicacion.objects.all()  
+    serializer_class = UbicacionSerializer
+
+class UbicacionDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Ubicacion.objects.all()  
+    serializer_class = UbicacionSerializer 
+
+#Evidecia
+class EvidenciaListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Evidencia.objects.all()  
+    serializer_class = EvidenciaSerializer
+
+class EvidenciaDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Evidencia.objects.all()  
+    serializer_class = EvidenciaSerializer 
+
+#Fauna y flora
+class FaunaFloraListCreateAPIView(generics.ListCreateAPIView):
+    queryset = FaunaFlora.objects.all()  
+    serializer_class = FaunaFloraSerializer
+
+class FaunaFloraDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FaunaFlora.objects.all()  
+    serializer_class = FaunaFloraSerializer 
+
+#imagen
+class ImagenListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Imagen.objects.all()  
+    serializer_class = ImagenSerializer
+
+class ImagenDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Imagen.objects.all()  
+    serializer_class = ImagenSerializer 
+
+#Emergencia
+class EmergenciaListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Emergencia.objects.all()  
+    serializer_class = Emergenciaerializer
+
+class EmergenciaDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Emergencia.objects.all()  
+    serializer_class = Emergenciaerializer 
